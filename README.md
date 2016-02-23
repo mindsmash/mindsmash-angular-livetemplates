@@ -9,4 +9,6 @@ After cloning the repository, IntelliJ IDEA needs to be restarted.
 
 ## List of Templates
 
-* **$testC** - Template for Jasmine controller test.
+### Jasmine
+* **$it** - Template for "it" blocks.
+* **$testC** - Template for controller tests.
