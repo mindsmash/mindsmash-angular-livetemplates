@@ -10,4 +10,13 @@
       <option name="JS_STATEMENT" value="true" />
     </context>
   </template>
+  <template name="$it" value="it('should $should$', function () {&#10;    // given&#10;    $END$&#10;    // when&#10;    &#10;    // then&#10;&#10;});" description="Creates &quot;it&quot; definition for Jasmine tests" toReformat="false" toShortenFQNames="true">
+    <variable name="should" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
 </templateSet>
