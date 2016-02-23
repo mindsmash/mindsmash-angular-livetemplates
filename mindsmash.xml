@@ -1,0 +1,13 @@
+<templateSet group="mindsmash">
+  <template name="$testC" value="(function () {&#10;  'use strict';&#10;&#10;  var moduleName = '$moduleName$';&#10;&#10;  describe('module: ' + moduleName, function () {&#10;&#10;    var $controller;&#10;&#10;    beforeEach(module(moduleName));&#10;&#10;    beforeEach(inject(function (_$controller_) {&#10;      $controller = _$controller_;&#10;    }));&#10;    &#10;    var controllerName = '$controllerName$';&#10;&#10;    describe('controller: ' + controllerName, function () {&#10;&#10;        function buildController() {&#10;            return $controller(controllerName, {&#10;&#10;            });&#10;        }&#10;&#10;        it('should $testCase$', function () {&#10;          // given&#10;          $END$&#10;          // when&#10;        &#10;          // then&#10;        });&#10;&#10;    });&#10;  });&#10;  &#10;})();" shortcut="SPACE" description="Creates a Jasmine test for angular controllers" toReformat="true" toShortenFQNames="true">
+    <variable name="moduleName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="controllerName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="testCase" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+</templateSet>
