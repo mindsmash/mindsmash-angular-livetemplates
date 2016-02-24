@@ -9,6 +9,9 @@ After cloning the repository, IntelliJ IDEA needs to be restarted.
 
 ## List of Templates
 
+### Angular
+* **$directive** - Template for an angular directive with a separate controller.
+
 ### Jasmine
 * **$it** - Template for "it" blocks.
 * **$testC** - Template for controller tests.
