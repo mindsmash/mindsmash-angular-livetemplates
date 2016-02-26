@@ -44,4 +44,25 @@
       <option name="JS_STATEMENT" value="true" />
     </context>
   </template>
+  <template name="$testLink" value="(function () {&#10;  'use strict';&#10;&#10;  var moduleName = '$module$';&#10;  var directiveName = '$directiveName$';&#10;&#10;  describe('module: ' + moduleName, function () {&#10;&#10;    var $scope, $compile, template;&#10;&#10;    beforeEach(module(moduleName));&#10;&#10;    describe('directive: ' + directiveName, function () {&#10;&#10;      beforeEach(function() {&#10;        module(function($provide) {&#10;          // $provide.value();&#10;        });&#10;      });&#10;&#10;      beforeEach(inject(function ($rootScope, _$compile_) {&#10;        $scope = $rootScope.$new();&#10;        $compile = _$compile_;&#10;        template = '&lt;$directiveName$&gt;&lt;/$directiveName$&gt;';&#10;      }));&#10;&#10;      it('should $should$', function () {&#10;        // given&#10;        $END$&#10;        // when&#10;        var element = $compile(angular.element(template))($scope);&#10;        $scope.$digest();&#10;&#10;        // then&#10;      });&#10;&#10;    });&#10;&#10;  });&#10;})();" shortcut="SPACE" description="Creates a Jasmine test for angular directives with the link function under test" toReformat="true" toShortenFQNames="true">
+    <variable name="module" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="directiveName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="should" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="$describe" value="describe('$describe$', function() {&#10;&#10;    it('should $should$', function () {&#10;        // given&#10;        $END$&#10;        // when&#10;        &#10;        // then&#10;    &#10;    });&#10;&#10;});" description="Creates &quot;describe&quot; definition for Jasmine tests" toReformat="false" toShortenFQNames="true">
+    <variable name="describe" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="should" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
 </templateSet>
