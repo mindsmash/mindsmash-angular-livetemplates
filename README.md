@@ -21,4 +21,6 @@ After cloning the repository, IntelliJ IDEA needs to be restarted.
  
 ### ngDoc
 * **$docD** - Creates an ngDoc comment block for directives.
+* **$docS** - Creates an ngDoc comment block for services / providers.
+* **$docM** - Creates an ngDoc comment block for methods.
 
