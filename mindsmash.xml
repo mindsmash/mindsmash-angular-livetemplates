@@ -75,4 +75,24 @@
       <option name="JS_STATEMENT" value="true" />
     </context>
   </template>
+  <template name="$docM" value="/**&#10; * @ngdoc method&#10; * @name $module$#$methodName$&#10; * @methodOf $module$&#10; *&#10; * @description&#10; * $END$&#10; *&#10; * @param {}&#10; * @returns {}&#10; */" description="Creates an  ngDoc comment block for methods." toReformat="true" toShortenFQNames="true">
+    <variable name="module" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="methodName" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="$docS" value="  /**&#10;   * @ngdoc service&#10;   * @name $module$.$name$&#10;   *&#10;   * @description&#10;   * $END$&#10;   *&#10;   * @requires &#10;   */" description="Creates an ngDoc comment block for services." toReformat="true" toShortenFQNames="true">
+    <variable name="module" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
 </templateSet>
