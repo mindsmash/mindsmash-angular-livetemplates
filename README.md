@@ -18,3 +18,7 @@ After cloning the repository, IntelliJ IDEA needs to be restarted.
 * **$testC** - Template for tests of controllers.
 * **$testD** - Template for tests of directives which contain a nested controller.
 * **$testLink** - Template for tests of directives with a link function under test. 
+ 
+### ngDoc
+* **$docD** - Creates an ngDoc comment block for directives.
+
