@@ -19,7 +19,7 @@
       <option name="JS_STATEMENT" value="true" />
     </context>
   </template>
-  <template name="$directive" value="(function () {&#10;  'use strict';&#10;&#10;  angular&#10;      .module('$module$')&#10;      .directive('$directive$', $directiveFn$)&#10;      .controller('$directiveFn$Ctrl', $directiveFn$Ctrl);&#10;&#10;  /**&#10;   * @ngdoc $directive$&#10;   * @name $module$:$directive$&#10;   * @restrict '$restrict$'&#10;   *&#10;   * @description&#10;   *&#10;   * @param &#10;   *&#10;   * @example&#10;   * &lt;example module=&quot;example&quot;&gt;&#10;   *   &#10;   * &lt;/example&gt;&#10;   */&#10;  function $directiveFn$() {&#10;    return {&#10;      restrict: '$restrict$',&#10;      templateUrl: '$url$',&#10;      scope : {},&#10;      bindToController: {&#10;      },&#10;      controller: '$directiveFn$Ctrl',&#10;      controllerAs: '$directive$'&#10;    };&#10;  }&#10;&#10;  function $directiveFn$Ctrl() {&#10;    var vm = this;&#10;    $END$&#10;  }&#10;})();&#10;" description="Creates angular directive" toReformat="true" toShortenFQNames="true">
+  <template name="$directive" value="(function () {&#10;  'use strict';&#10;&#10;  angular&#10;      .module('$module$')&#10;      .directive('$directive$', $directiveFn$)&#10;      .controller('$directiveFn$Ctrl', $directiveFn$Ctrl);&#10;&#10;  function $directiveFn$() {&#10;    return {&#10;      restrict: '$restrict$',&#10;      templateUrl: '$url$',&#10;      scope : {},&#10;      bindToController: {&#10;      },&#10;      controller: '$directiveFn$Controller',&#10;      controllerAs: '$directive$'&#10;    };&#10;  }&#10;&#10;  function $directiveFn$Ctrl() {&#10;    var vm = this;&#10;    $END$&#10;  }&#10;})();&#10;" description="Creates angular directive" toReformat="true" toShortenFQNames="true">
     <variable name="module" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="directive" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="directiveFn" expression="capitalize(directive)" defaultValue="" alwaysStopAt="true" />
@@ -97,6 +97,17 @@
   </template>
   <template name="$docM" value="  /**&#10;   * @ngdoc overview&#10;   * @name $module$&#10;   *&#10;   * @description&#10;   * $END$&#10;   *&#10;   * @requires&#10;   */" description="Creates an ngDoc comment block for angular modules" toReformat="true" toShortenFQNames="true">
     <variable name="module" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="$service" value="(function () {&#10;  'use strict';&#10;&#10;  angular.module('$module$')&#10;      .factory('$serviceName$', $serviceName$);&#10;&#10;  function $serviceName$() {&#10;&#10;    return {&#10;      $function$: $function$&#10;    };&#10;&#10;    function $function$() {&#10;        $END$&#10;    }&#10;&#10;})();" description="Creates an angular service" toReformat="true" toShortenFQNames="true">
+    <variable name="module" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="serviceName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="function" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
       <option name="JS_EXPRESSION" value="true" />
