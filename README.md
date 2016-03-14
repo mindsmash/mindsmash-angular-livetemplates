@@ -11,6 +11,7 @@ After cloning the repository, IntelliJ IDEA needs to be restarted.
 
 ### Angular
 * **$directive** - Template for an angular directive with a separate controller.
+* **$service** - Template for an angular service (actually its a factory, since we don't use services at all).
 
 ### Jasmine
 * **$it** - Template for "it" blocks.
