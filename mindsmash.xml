@@ -115,4 +115,24 @@
       <option name="JS_STATEMENT" value="true" />
     </context>
   </template>
+  <template name="$testProvider" value="(function () {&#10;  'use strict';&#10;&#10;  var moduleName = '$moduleName$';&#10;&#10;  describe('module: ' + moduleName, function () {&#10;&#10;    var $serviceName$Provider, $serviceName$;&#10;&#10;    beforeEach(function () {&#10;&#10;      // initialize the service provider by injecting it to a fake module's config block&#10;      angular.module('module.test', ['$moduleName$']);&#10;      angular.module('module.test').config(function (_$serviceName$Provider_) {&#10;        $serviceName$Provider = _$serviceName$Provider_;&#10;        &#10;        // Call methods on the provider in config phase here&#10;      });&#10;&#10;      // initialize test.app injector&#10;      module('module.test');&#10;    });&#10;&#10;    // inject the actual service&#10;    beforeEach(inject(function (_$serviceName$_) {&#10;      $serviceName$ = _$serviceName$_;&#10;    }));&#10;&#10;    describe('Service: $serviceName$', function () {&#10;&#10;      it('should ', function () {&#10;        // given&#10;        &#10;        // when&#10;        &#10;        // then&#10;      });&#10;&#10;    });&#10;&#10;  });&#10;&#10;  describe('Module: ' + moduleName, function () {&#10;&#10;    describe('Provider: $serviceName$Provider', function () {&#10;&#10;      // Create a fake module with the provider. You can use this method in any test&#10;      function createModule() {&#10;        angular.module('module.test', ['$moduleName$']);&#10;        angular.module('module.test').config(function (_$serviceName$Provider_) {&#10;            // Call methods on the provider in config phase here&#10;        });&#10;&#10;        module('module.test');&#10;        inject(function () {});&#10;      }&#10;&#10;      it('should ', function () {&#10;        // given&#10;        &#10;        // when&#10;        createModule();&#10;&#10;        // then&#10;      });&#10;&#10;    });&#10;&#10;  });&#10;&#10;})();&#10;" description="Creates a Jasmine test for angular provider" toReformat="true" toShortenFQNames="true">
+    <variable name="moduleName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="serviceName" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="$testService" value="(function () {&#10;  'use strict';&#10;&#10;  var moduleName = '$moduleName$';&#10;&#10;  describe('module: ' + moduleName, function () {&#10;&#10;    // the service's name&#10;    var $serviceName$;&#10;&#10;    beforeEach(function () {&#10;&#10;      module(moduleName, function ($provide) {&#10;        // provide dependencies for service&#10;      });&#10;&#10;      inject(function (_$serviceName$_) {&#10;        // inject dependencies for test&#10;        $serviceName$ = _$serviceName$_;&#10;      });&#10;&#10;    });&#10;&#10;    describe('Service: $serviceName$', function () {&#10;&#10;      it('should ', function () {&#10;        // given&#10;        $END$&#10;&#10;        // when&#10;&#10;        // then&#10;      });&#10;&#10;    });&#10;&#10;  });&#10;})();&#10;" description="Creates a Jasmine test for angular services" toReformat="true" toShortenFQNames="true">
+    <variable name="moduleName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="serviceName" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
 </templateSet>
