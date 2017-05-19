@@ -5,18 +5,12 @@
     <variable name="testCase" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
-      <option name="JS_EXPRESSION" value="true" />
-      <option name="JSX_HTML" value="true" />
-      <option name="JS_STATEMENT" value="true" />
     </context>
   </template>
   <template name="$it" value="it('should $should$', function () {&#10;    // given&#10;    $END$&#10;    // when&#10;    &#10;    // then&#10;&#10;});" description="Creates &quot;it&quot; definition for Jasmine tests" toReformat="true" toShortenFQNames="true">
     <variable name="should" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
-      <option name="JS_EXPRESSION" value="true" />
-      <option name="JSX_HTML" value="true" />
-      <option name="JS_STATEMENT" value="true" />
     </context>
   </template>
   <template name="$directive" value="(function () {&#10;  'use strict';&#10;&#10;  angular&#10;      .module('$module$')&#10;      .directive('$directive$', $directiveFn$)&#10;      .controller('$directiveFn$Controller', $directiveFn$Controller);&#10;&#10;  function $directiveFn$() {&#10;    return {&#10;      restrict: '$restrict$',&#10;      templateUrl: '$url$',&#10;      scope : {},&#10;      bindToController: {&#10;      },&#10;      controller: '$directiveFn$Controller',&#10;      controllerAs: '$ctrl'&#10;    };&#10;  }&#10;&#10;  function $directiveFn$Controller() {&#10;    var vm = this;&#10;    $END$&#10;  }&#10;})();&#10;" description="Creates angular directive" toReformat="true" toShortenFQNames="true">
@@ -27,9 +21,6 @@
     <variable name="url" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
-      <option name="JS_EXPRESSION" value="true" />
-      <option name="JSX_HTML" value="true" />
-      <option name="JS_STATEMENT" value="true" />
     </context>
   </template>
   <template name="$testDirective" value="(function () {&#10;  'use strict';&#10;&#10;  var moduleName = '$moduleName$';&#10;  var directiveName = '$directiveName$';&#10;&#10;  describe('module: ' + moduleName, function () {&#10;&#10;    var $controller;&#10;&#10;    beforeEach(module(moduleName));&#10;    &#10;    describe('directive: ' + directiveName, function () {&#10;&#10;        beforeEach(inject(function (_$controller_) {&#10;          $controller = _$controller_;&#10;        }));&#10;        &#10;        var controllerName = '$controllerName$';&#10;    &#10;        describe('controller: ' + controllerName, function () {&#10;    &#10;            function buildController() {&#10;                return $controller(controllerName, {&#10;    &#10;                });&#10;            }&#10;    &#10;            it('should $testCase$', function () {&#10;              // given&#10;              var ctrl = buildController();&#10;              $END$&#10;              // when&#10;            &#10;              // then&#10;            });&#10;    &#10;        });&#10;        &#10;      });&#10;      &#10;  });&#10;})();" shortcut="SPACE" description="Creates a Jasmine test for angular directives containin a directive" toReformat="true" toShortenFQNames="true">
@@ -39,9 +30,6 @@
     <variable name="testCase" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
-      <option name="JS_EXPRESSION" value="true" />
-      <option name="JSX_HTML" value="true" />
-      <option name="JS_STATEMENT" value="true" />
     </context>
   </template>
   <template name="$testLink" value="(function () {&#10;  'use strict';&#10;&#10;  var moduleName = '$module$';&#10;  var directiveName = '$directiveName$';&#10;&#10;  describe('module: ' + moduleName, function () {&#10;&#10;    var $scope, $compile, template;&#10;&#10;    beforeEach(module(moduleName));&#10;&#10;    describe('directive: ' + directiveName, function () {&#10;&#10;      beforeEach(function() {&#10;        module(function($provide) {&#10;          // $provide.value();&#10;        });&#10;      });&#10;&#10;      beforeEach(inject(function ($rootScope, _$compile_) {&#10;        $scope = $rootScope.$new();&#10;        $compile = _$compile_;&#10;        template = '&lt;$directiveName$&gt;&lt;/$directiveName$&gt;';&#10;      }));&#10;&#10;      it('should $should$', function () {&#10;        // given&#10;        $END$&#10;        // when&#10;        var element = $compile(angular.element(template))($scope);&#10;        $scope.$digest();&#10;&#10;        // then&#10;      });&#10;&#10;    });&#10;&#10;  });&#10;})();" shortcut="SPACE" description="Creates a Jasmine test for angular directives with the link function under test" toReformat="true" toShortenFQNames="true">
@@ -50,9 +38,6 @@
     <variable name="should" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
-      <option name="JS_EXPRESSION" value="true" />
-      <option name="JSX_HTML" value="true" />
-      <option name="JS_STATEMENT" value="true" />
     </context>
   </template>
   <template name="$describe" value="describe('$describe$', function() {&#10;&#10;    it('should $should$', function () {&#10;        // given&#10;        $END$&#10;        // when&#10;        &#10;        // then&#10;    &#10;    });&#10;&#10;});" description="Creates &quot;describe&quot; definition for Jasmine tests" toReformat="true" toShortenFQNames="true">
@@ -60,9 +45,6 @@
     <variable name="should" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
-      <option name="JS_EXPRESSION" value="true" />
-      <option name="JSX_HTML" value="true" />
-      <option name="JS_STATEMENT" value="true" />
     </context>
   </template>
   <template name="$docD" value="  /**&#10;   * @ngdoc directive&#10;   * @name $module$.$directiveName$:$directiveName$&#10;   * @element ANY&#10;   * @restrict AE&#10;   * @scope&#10;   *&#10;   * @description $END$&#10;   *&#10;   * @param {}&#10;   *&#10;   * @requires&#10;   *&#10;   */" description="Creates an ngDoc comment block for directives." toReformat="true" toShortenFQNames="true">
@@ -70,9 +52,6 @@
     <variable name="directiveName" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
-      <option name="JS_EXPRESSION" value="true" />
-      <option name="JSX_HTML" value="true" />
-      <option name="JS_STATEMENT" value="true" />
     </context>
   </template>
   <template name="$docF" value="/**&#10; * @ngdoc method&#10; * @name $module$#$methodName$&#10; * @methodOf $module$&#10; *&#10; * @description&#10; * $END$&#10; *&#10; * @param {}&#10; * @returns {}&#10; */" description="Creates an  ngDoc comment block for functions and methods." toReformat="true" toShortenFQNames="true">
@@ -80,9 +59,6 @@
     <variable name="methodName" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
-      <option name="JS_EXPRESSION" value="true" />
-      <option name="JSX_HTML" value="true" />
-      <option name="JS_STATEMENT" value="true" />
     </context>
   </template>
   <template name="$docS" value="  /**&#10;   * @ngdoc service&#10;   * @name $module$.$name$&#10;   *&#10;   * @description&#10;   * $END$&#10;   *&#10;   * @requires &#10;   */" description="Creates an ngDoc comment block for services." toReformat="true" toShortenFQNames="true">
@@ -90,18 +66,12 @@
     <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
-      <option name="JS_EXPRESSION" value="true" />
-      <option name="JSX_HTML" value="true" />
-      <option name="JS_STATEMENT" value="true" />
     </context>
   </template>
   <template name="$docM" value="  /**&#10;   * @ngdoc overview&#10;   * @name $module$&#10;   *&#10;   * @description&#10;   * $END$&#10;   *&#10;   * @requires&#10;   */" description="Creates an ngDoc comment block for angular modules" toReformat="true" toShortenFQNames="true">
     <variable name="module" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
-      <option name="JS_EXPRESSION" value="true" />
-      <option name="JSX_HTML" value="true" />
-      <option name="JS_STATEMENT" value="true" />
     </context>
   </template>
   <template name="$service" value="(function () {&#10;  'use strict';&#10;&#10;  angular.module('$module$')&#10;      .factory('$serviceName$', $serviceName$);&#10;&#10;  function $serviceName$() {&#10;&#10;    return {&#10;      $function$: $function$&#10;    };&#10;&#10;    function $function$() {&#10;        $END$&#10;    }&#10;&#10;})();" description="Creates an angular service" toReformat="true" toShortenFQNames="true">
@@ -110,9 +80,6 @@
     <variable name="function" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
-      <option name="JS_EXPRESSION" value="true" />
-      <option name="JSX_HTML" value="true" />
-      <option name="JS_STATEMENT" value="true" />
     </context>
   </template>
   <template name="$testProvider" value="(function () {&#10;  'use strict';&#10;&#10;  var moduleName = '$moduleName$';&#10;&#10;  describe('module: ' + moduleName, function () {&#10;&#10;    var $serviceName$Provider, $serviceName$;&#10;&#10;    beforeEach(function () {&#10;&#10;      // initialize the service provider by injecting it to a fake module's config block&#10;      angular.module('module.test', ['$moduleName$']);&#10;      angular.module('module.test').config(function (_$serviceName$Provider_) {&#10;        $serviceName$Provider = _$serviceName$Provider_;&#10;        &#10;        // Call methods on the provider in config phase here&#10;      });&#10;&#10;      // initialize test.app injector&#10;      module('module.test');&#10;    });&#10;&#10;    // inject the actual service&#10;    beforeEach(inject(function (_$serviceName$_) {&#10;      $serviceName$ = _$serviceName$_;&#10;    }));&#10;&#10;    describe('Service: $serviceName$', function () {&#10;&#10;      it('should ', function () {&#10;        // given&#10;        &#10;        // when&#10;        &#10;        // then&#10;      });&#10;&#10;    });&#10;&#10;  });&#10;&#10;  describe('Module: ' + moduleName, function () {&#10;&#10;    describe('Provider: $serviceName$Provider', function () {&#10;&#10;      // Create a fake module with the provider. You can use this method in any test&#10;      function createModule() {&#10;        angular.module('module.test', ['$moduleName$']);&#10;        angular.module('module.test').config(function (_$serviceName$Provider_) {&#10;            // Call methods on the provider in config phase here&#10;        });&#10;&#10;        module('module.test');&#10;        inject(function () {});&#10;      }&#10;&#10;      it('should ', function () {&#10;        // given&#10;        &#10;        // when&#10;        createModule();&#10;&#10;        // then&#10;      });&#10;&#10;    });&#10;&#10;  });&#10;&#10;})();&#10;" description="Creates a Jasmine test for angular provider" toReformat="true" toShortenFQNames="true">
@@ -120,9 +87,6 @@
     <variable name="serviceName" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
-      <option name="JS_EXPRESSION" value="true" />
-      <option name="JSX_HTML" value="true" />
-      <option name="JS_STATEMENT" value="true" />
     </context>
   </template>
   <template name="$testService" value="(function () {&#10;  'use strict';&#10;&#10;  var moduleName = '$moduleName$';&#10;&#10;  describe('module: ' + moduleName, function () {&#10;&#10;    // the service's name&#10;    var $serviceName$;&#10;&#10;    beforeEach(function () {&#10;&#10;      module(moduleName, function ($provide) {&#10;        // provide dependencies for service&#10;      });&#10;&#10;      inject(function (_$serviceName$_) {&#10;        // inject dependencies for test&#10;        $serviceName$ = _$serviceName$_;&#10;      });&#10;&#10;    });&#10;&#10;    describe('Service: $serviceName$', function () {&#10;&#10;      it('should ', function () {&#10;        // given&#10;        $END$&#10;&#10;        // when&#10;&#10;        // then&#10;      });&#10;&#10;    });&#10;&#10;  });&#10;})();&#10;" description="Creates a Jasmine test for angular services" toReformat="true" toShortenFQNames="true">
@@ -130,9 +94,6 @@
     <variable name="serviceName" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
-      <option name="JS_EXPRESSION" value="true" />
-      <option name="JSX_HTML" value="true" />
-      <option name="JS_STATEMENT" value="true" />
     </context>
   </template>
   <template name="$controller" value="(function (angular) {&#10;  'use strict';&#10;&#10;  angular&#10;      .module('$moduleName$')&#10;      .controller('$controllerName$', $controllerName$);&#10;&#10;  function $controllerName$() {&#10;    var vm = this;&#10;    &#10;    $END$&#10;  }&#10;&#10;})(angular);&#10;" description="Creates a minimal angular controller" toReformat="false" toShortenFQNames="true">
@@ -140,9 +101,15 @@
     <variable name="controllerName" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_SCRIPT" value="true" />
-      <option name="JS_EXPRESSION" value="true" />
-      <option name="JSX_HTML" value="true" />
-      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="$component" value="(function () {&#10;  'use strict';&#10;&#10;  angular&#10;    .module('$module$')&#10;    .component('$componentName$', $componentFN$())&#10;    .controller('$controller$', $controller$);&#10;&#10;  function $componentFN$() {&#10;    return {&#10;      templateUrl: '',&#10;      bindings: {},&#10;      controller: '$controller$'&#10;    };&#10;  }&#10;&#10;  function $controller$() {&#10;    var vm = this;&#10;&#10;  }&#10;})();&#10;" description="Creates a angular component" toReformat="false" toShortenFQNames="true">
+    <variable name="module" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="componentName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="componentFN" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="controller" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
 </templateSet>
